@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///C:/Users/vrushti%20shah/OneDrive/Desktop/Portfolio.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="file:///C:/Users/vrushti%20shah/OneDrive/Desktop/styles.css">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-image: url('background.png'); /* Specify the path to your background image */
+
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            width: 60px; /* Width of the navbar */
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            width: 250px; /* Adjust the width of the sidebar */
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+            transform: translateX(-100%); /* Initially hidden */
+            transition: transform 0.3s;
+        }
+
+        /* Position social links at the bottom */
+        .social-links {
+            position: absolute;
+            bottom: 20px; /* Adjust the distance from the bottom as needed */
+        }
+
+            .social-links a {
+                display: inline-flex;
+                text-decoration: none;
+                color: black;
+                padding: 10px 30px;
+                transition: box-shadow 0.3s, color 0.3s;
+                text-align: center;
+            }
+
+                .social-links a:hover {
+                    box-shadow: 0 0 10px cyan;
+                }
+
+        .profile {
+            text-align: center;
+            padding: 20px;
+        }
+
+            .profile img {
+                max-width: 20%;
+                border-radius: 20%;
+                box-shadow: 0 0 10px cyan;
+            }
+
+            .profile h1 {
+                font-size: 24px;
+                margin: 10px 0;
+            }
+
+            .profile p {
+                font-size: 14px;
+            }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+            .menu a:hover {
+                background-color: darkcyan;
+            }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 60px; /* Adjust margin-left to accommodate the navbar width */
+            transition: margin-left 0.3s;
+        }
+
+        .sidebar.active {
+            transform: translateX(0); /* Show the sidebar */
+        }
+
+        .content .section{
+            display: none;
+        }
+
+        .content .section.active{
+            display:block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+    </div>
+    <div class="sidebar">
+        <div class="menu">
+            <ul>
+                <li><a href="file:///C:/Users/vrushti%20shah/OneDrive/Desktop/Portfolio.html#home" onclick="openPage(&#39;home&#39;)">Home</a></li>
+                <li><a href="file:///C:/Users/vrushti%20shah/OneDrive/Desktop/Portfolio.html#about" onclick="openPage(&#39;about&#39;)">About</a></li>
+                <li><a href="file:///C:/Users/vrushti%20shah/OneDrive/Desktop/Portfolio.html#skills" onclick="openPage(&#39;skills&#39;)">My Skills</a></li>
+                <li><a href="file:///C:/Users/vrushti%20shah/OneDrive/Desktop/Portfolio.html#info" onclick="openPage(&#39;info&#39;)">Personal Info</a></li>
+                <li><a href="file:///C:/Users/vrushti%20shah/OneDrive/Desktop/Portfolio.html#contact" onclick="openPage(&#39;contact&#39;)">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <section id="home" class="section active">
+            <h1>My Portfolio</h1>
+            <div class="profile">
+                <img src="./My Portfolio_files/profile.jpg" alt="Profile Picture">
+                <h1>Vrushti Saurin Shah</h1>
+                <p>Web Developer || Web Designer || Software Engineer</p>
+                <p>Hi, I am Vrushti Shah</p>
+                <p>I've dedicated myself to the world of software development, and along this journey, I've cultivated proficiency in a wide array of skills. From mastering the intricacies of HTML, CSS, JavaScript, C++, and C# to delving into desktop application development and web services, my passion has driven me to explore the ever-evolving tech landscape. With my commitment to excellence and a relentless thirst for knowledge, I am poised to make a significant impact in the realm of software engineering.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/_itsvru215/?hl=en">Instagram</a>
+                <a href="https://www.upwork.com/freelancers/~010fda5f6b34bc6154?qpn-profile-completeness=certificate">Upwork</a>
+                <a href="https://www.linkedin.com/in/vrushti-shah-138192241/">LinkedIn</a>
+                <a href="https://github.com/vrushti215">GitHub</a>
+                <a href="https://twitter.com/home">Twitter</a>
+            </div>
+        </section>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Greetings, I'm a seasoned developer crafting websites tailored for small and medium-sized businesses. If you want to establish a compelling online presence, promote your services, or set up an e-commerce platform, I'm here to make it happen. Here's a concise glimpse into what I bring to the table:</p>
+
+            <h3>Web Development Expertise:</h3>
+            <p>My proficiency spans various web development technologies, including HTML and CSS3 for impeccable design, PHP for robust functionality, jQuery for interactive user experiences, and WordPress for versatile content management. I'm well-versed in the art of SEO, ensuring your website is not just beautiful but also easily discoverable.</p>
+
+            <h3>End-to-End Project Management:</h3>
+            <p>I take pride in offering comprehensive project management services, from the initial concept to the final launch. You can count on me to handle all aspects of your website development, ensuring a smooth and successful journey.</p>
+
+            <h3>Effective Communication:</h3>
+            <p>I understand the significance of regular and transparent communication. We'll work closely together to ensure your project aligns with your vision, and I'll keep you informed every step of the way.</p>
+
+            <p>In a nutshell, I'm a dedicated developer ready to transform your online presence. Whether it's a website to showcase your offerings, an e-commerce platform to boost sales or any other web-related project, I've got the skills and experience to help your business thrive. Let's connect and turn your web dreams into a digital reality</p>
+
+            <h3>Education:</h3>
+            <p>
+                - Advanced Diploma in Software Engineering Technology<br>
+                Conestoga College (2023 - Present)
+            </p>
+
+            <p>
+                - Certificate of Software Engineering<br>
+                Tops Technologies (2021 - 2022)
+            </p>
+        </section>
+        <section id="skills" class="section">
+            <!-- My Skills Section -->
+            <h2>My Skills</h2>
+            <div class="skills-dropdown" id="desktop-application">
+                <h3>=&gt; Desktop Application</h3>
+                <p>Building desktop applications for various platforms.</p>
+            </div>
+            <div class="skills-dropdown" id="software-development">
+                <h3>=&gt; Software Development</h3>
+                <p>Developing software solutions to address specific business needs.</p>
+            </div>
+            <div class="skills-dropdown" id="computer-assembly">
+                <h3>=&gt; Computer Assembly</h3>
+                <p>Assembling computer hardware components for custom systems.</p>
+            </div>
+            <div class="skills-dropdown" id="html">
+                <h3>=&gt; HTML</h3>
+                <p>Creating the structure and content of web pages using HTML.</p>
+            </div>
+            <div class="skills-dropdown" id="css">
+                <h3>=&gt; CSS</h3>
+                <p>Styling web pages and enhancing their layout with CSS.</p>
+            </div>
+            <div class="skills-dropdown" id="c-sharp">
+                <h3>=&gt; C#</h3>
+                <p>Using C# for developing Windows applications and web services.</p>
+            </div>
+            <div class="skills-dropdown" id="c-plus-plus">
+                <h3>=&gt; C++</h3>
+                <p>Programming in C++ for system software and game development.</p>
+            </div>
+            <div class="skills-dropdown" id="database">
+                <h3>=&gt; Database</h3>
+                <p>Designing and managing databases for data storage and retrieval.</p>
+            </div>
+            <div class="skills-dropdown" id="sql-programming">
+                <h3>=&gt; SQL Programming</h3>
+                <p>Writing SQL queries for database operations and data analysis.</p>
+            </div>
+            <div class="skills-dropdown" id="javascript">
+                <h3>=&gt; JavaScript</h3>
+                <p>Adding interactivity and functionality to web applications using JavaScript.</p>
+            </div>
+            <div class="skills-dropdown" id="cgi">
+                <h3>=&gt; CGI</h3>
+                <p>Using Common Gateway Interface for web application development.</p>
+            </div>
+            <div class="skills-dropdown" id="web-development">
+                <h3>=&gt; Web Development</h3>
+                <p>Creating dynamic websites and web applications with various technologies.</p>
+            </div>
+            <div class="skills-dropdown" id="web-design">
+                <h3>=&gt; Web Design</h3>
+                <p>Designing user-friendly and visually appealing web interfaces.</p>
+            </div>
+            <div class="skills-dropdown" id="git">
+                <h3>=&gt; Git</h3>
+                <p>Version control and collaboration using Git and GitHub.</p>
+            </div>
+            <div class="skills-dropdown" id="c">
+                <h3>=&gt; C</h3>
+                <p>Programming in the C language for system-level development.</p>
+            </div>
+        </section>
+
+
+        <section id="info" class="section">
+            <h2>Personal Info</h2>
+            <b>Name:</b>
+            <a>Vrushti Saurin Shah</a>
+            <p>
+                <b>Age:</b>
+                <a>19 Years</a>
+            </p>
+            <p>
+                <b>Address:</b>
+                <a>300 Regina Street North Waterloo, ON, N2J 4H2</a>
+            </p>
+            <p>
+                <b>Email:</b>
+                <a>vrushtishah215@gmail.com</a>
+            </p>
+            <p>
+                <b>Phone:</b>
+                <a>548-333-1058</a>
+            </p>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>
+                <b>Email:</b>
+                <a>vrushtishah215@gmail.com</a>
+            </p>
+            <p>
+                <b>Phone:</b>
+                <a>548-333-1058</a>
+            </p>
+        </section>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.classList.toggle("active");
+        }
+
+        function openPage(pageId) {
+            const sections = document.querySelectorAll(".section");
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
+
+            const selectedSection = document.getElementById(pageId);
+            if (selectedSection) {
+                selectedSection.classList.add("active");
+            }
+            closeSidebar();
+        }
+
+        function closeSidebar() {
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.classList.remove("active");
+        }
+    </script>
+
+
+</body></html>
